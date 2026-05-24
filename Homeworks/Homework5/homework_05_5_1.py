@@ -44,12 +44,12 @@ car_data = {
   'Ford F-Series': ('gray', 2021, 3.5, 'pickup', 50000),
   'Nissan Titan': ('silver', 2018, 5.6, 'pickup', 35000)
 }
-search_criteria = (2017, 1.6, 36000)
+SEARCH_CRITERIA = (2017, 1.6, 36000)
 
 
 # ВИРІШЕННЯ:
 # Розпаковую тапл з критеріями, щоб потім легше звертатись до нього у циклі
-year, engine, price = search_criteria
+year, engine, price = SEARCH_CRITERIA
 
 # Створюю новий список який буде в себе приймати списки
 cars_from_search_criteria = []
@@ -62,13 +62,9 @@ for key, value in car_data.items():
 
 # Створюю новий сортований списозок з елементів з мого cars_from_search_criteria списку, оскільки там елементи є списки з першою у собі ціною, тому вони сортуються по ціні
 sorted_cars = sorted(cars_from_search_criteria)
+top5_cars = sorted_cars[:5]
 
 # Виводжу топ 5 машин у висхідному порядку, тобто від меншої ціни до найбільшої ціни
 print(f"Топ 5 машин у висхідному порядку: \n")
-count = 0
-for i in sorted_cars:
-    count += 1
-    if count <= 5:
-        print(f"Машина {i[1]} з ціною —— {i[0]}")
-    else:
-        break
+for i in top5_cars:
+  print(f"Машина {i[1]} з ціною —— {i[0]}")

@@ -27,7 +27,7 @@ people_records = [
 people_records.insert(0, ('Yaroslav', 'Faliush', 27, 'QA Engineer', 'Kyiv'))
 
 # Міняю місцями 2 і 6 запис у модифікованому списку
-people_records[1] = people_records[5]
+people_records[1], people_records[5] = people_records[5], people_records[1]
 
 # Виводжу і перевіряю чи записи 7, 11, 14 у модифікованому списку мають дорівнює або більше ніж 30 років
 if people_records[6][2] >= 30 and people_records[10][2] >= 30 and people_records[13][2] >= 30:
