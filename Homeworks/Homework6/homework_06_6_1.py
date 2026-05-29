@@ -1,9 +1,5 @@
 string_1 = input("Enter your string: ")
 
-uniq = []
+new_set = set(string_1)
 
-for i in string_1:
-    if string_1.count(i) == 1:
-        uniq.append(i)
-
-print(len(uniq) > 10)
+print(len(set(new_set)) > 10)
