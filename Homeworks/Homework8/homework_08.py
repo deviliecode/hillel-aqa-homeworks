@@ -1,14 +1,13 @@
 class Student:
 
-    def __init__(s, first_name, second_name, age: int, avarage_score):
-        s.first_name = first_name
-        s.second_name = second_name
-        s.age = age
-        s.avarage_score = avarage_score
+    def __init__(self, first_name, second_name, age: int, avarage_score):
+        self.first_name = first_name
+        self.second_name = second_name
+        self.age = age
+        self.avarage_score = avarage_score
 
-    def change_avarage_score(s, new_avarage_score: int):
-        s.avarage_score = new_avarage_score
-        return s.avarage_score
+    def change_avarage_score(self, new_avarage_score: int):
+        self.avarage_score = new_avarage_score
 
 
 yaroslav = Student("Yaroslav", "Faliush", 22, 92)
