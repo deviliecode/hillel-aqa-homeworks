@@ -5,6 +5,9 @@ class Romb:
         if key == "side_a" and value <= 0:
             raise AttributeError(f"Значення сторони {key} повинно бути більше 0.")
 
+        if key == "angle_a" and value == 0:
+            raise AttributeError(f"Кут не може бути 0")
+
         if key == "angle_b" and value + self.angle_a != 180:
             raise AttributeError("Сума кутів angle_a та angle_b НЕ дорівнює 180")
 
