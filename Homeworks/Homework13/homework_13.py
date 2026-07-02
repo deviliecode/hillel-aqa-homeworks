@@ -22,7 +22,7 @@ def log_event(username: str, status: str):
 
     # Створення та налаштування логера
     logging.basicConfig(
-        filename='login_system.log',
+        filename='system.log',
         level=logging.INFO,
         format='%(asctime)s - %(message)s'
         )
@@ -43,7 +43,7 @@ import unittest
 
 def get_last_log_line():
     """Для отримання останнього рядка з логів"""
-    with open('login_system.log', 'r') as f:
+    with open('system.log', 'r') as f:
         lines = f.readlines()
         if lines:
             return lines[-1]
