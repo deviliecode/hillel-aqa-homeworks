@@ -1,6 +1,8 @@
 import unittest
+import allure
 from homework_12 import *
 
+@allure.feature("Юніт тести")
 class TestSumSquareSea(unittest.TestCase):
 
     def test_sum_square_sea_positive(self):
