@@ -6,3 +6,4 @@ system.log
 .venv/
 .env
 /.pytest_cache
+allure-results/
