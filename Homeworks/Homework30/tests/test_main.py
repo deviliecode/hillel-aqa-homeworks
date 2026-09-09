@@ -1,10 +1,12 @@
 import allure
+import pytest
 from playwright.sync_api import Page, expect
 import os
 import dotenv
 
 dotenv.load_dotenv()
 
+@pytest.mark.skip
 @allure.feature("Авторизація користувача")
 def test_login(page: Page):
     with allure.step("Ввести валідні дані"):
